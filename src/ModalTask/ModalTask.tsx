@@ -2,12 +2,11 @@ import React from "react";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { Button, DatePicker, Form, Input, Modal } from "antd";
-import "./ModalTask.css";
 import useStoreDispatch from "../hooks/use-store-dispatch";
-import { STATUSES } from "../helpers/constants";
 import { TaskType } from "../helpers/types";
-import { useForm } from "antd/es/form/Form";
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
+
+import "./ModalTask.css";
 
 type FieldType = {
   title: string;
@@ -41,7 +40,14 @@ function ModalTask({
         initialValues={filteredTask}
         validationSchema={validationSchema}
         onSubmit={(value) => {
-          addOrUpdateTask(value as unknown as TaskType);
+          const result = { ...value };
+          console.log(result.dueDate);
+          console.log(typeof result.dueDate);
+          console.log(typeof result.dueDate !== "string");
+          if (result.dueDate && typeof result.dueDate !== "string") {
+            result.dueDate = task.dueDate as unknown as Dayjs;
+          }
+          addOrUpdateTask(result as unknown as TaskType);
           closeNewTaskContainer();
         }}
       >

@@ -7,17 +7,21 @@ Welcome to the Todo List application! This frontend-only app is designed to help
 ## Key Features and User Interactions
 
 ### Task Addition
+
 - Users can easily add new tasks (todos).
 - Each task requires a mandatory title (text input), an optional description (text input), and an optional deadline (date input).
 
 ### Task Editing
+
 - Users have the flexibility to edit the details of existing tasks, including the title, description, and deadline.
 
 ### Task Deletion
+
 - Users can remove tasks as needed.
 - Removed tasks are moved to a 'Trash' section where users can still view them.
 
 ### Task Status Management
+
 - Each task can be in one of three states:
   - Pending: The default state when a task is created.
   - Completed: Users can mark tasks as complete.

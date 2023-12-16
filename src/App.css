@@ -1,3 +1,9 @@
 .container {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ebf0f7;
+}
+
+.container-with-padding {
   padding: 30px;
 }

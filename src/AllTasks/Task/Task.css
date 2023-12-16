@@ -2,12 +2,16 @@
   width: 30%;
   min-width: 300px;
   margin: 5px;
-  padding: 5px;
-  border: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  margin-bottom: 1rem;
+  border: 3px solid transparent;
+  background-color: white;
 }
 
 .task-container > .anticon {
@@ -32,12 +36,17 @@
   justify-content: space-between;
 }
 
+.task-info > div:not(:first-child) {
+  margin-top: 5px;
+}
+
 .title {
   font-weight: bold;
 }
 
 .value {
   margin-left: 10px;
+  text-align: right;
   overflow: hidden;
   display: flex;
 }
