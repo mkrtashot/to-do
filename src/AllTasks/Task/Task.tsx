@@ -69,7 +69,7 @@ function Task({ task }: { task: TaskType }) {
               onClick={onClickMarkAsComplete}
               disabled={isOverdue}
               type="primary"
-              style={{ backgroundColor: "rgb(246, 255, 237);" }}
+              style={{ backgroundColor: "#52c41a" }}
             >
               Mark as Complete
             </Button>

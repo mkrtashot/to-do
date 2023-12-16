@@ -31,6 +31,10 @@
   margin-top: 15px;
 }
 
+.task-button-container > button {
+    margin-top: 5px;
+}
+
 .task-info > div {
   display: flex;
   justify-content: space-between;
