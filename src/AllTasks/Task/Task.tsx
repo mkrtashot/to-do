@@ -65,11 +65,18 @@ function Task({ task }: { task: TaskType }) {
       {!isDeleted && (
         <div className="task-button-container">
           {!isCompleted && (
-            <Button onClick={onClickMarkAsComplete} disabled={isOverdue}>
+            <Button
+              onClick={onClickMarkAsComplete}
+              disabled={isOverdue}
+              type="primary"
+              style={{ backgroundColor: "rgb(246, 255, 237);" }}
+            >
               Mark as Complete
             </Button>
           )}
-          <Button onClick={onClickDeleteTask}>Delete Task</Button>
+          <Button onClick={onClickDeleteTask} danger>
+            Delete Task
+          </Button>
           <Button onClick={openNewTaskContainer}>Edit Task</Button>
           {openContainer && (
             <ModalTask
